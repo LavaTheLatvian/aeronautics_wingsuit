@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "net.lavathelatvian.aeronautics_wingsuit.mixins",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "FireworkMixin",
+    "WingsuitDragMixin"
+
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
