@@ -28,7 +28,7 @@ public class FireworkMixin {
 
         if (player.isFallFlying() && player.getItemBySlot(EquipmentSlot.CHEST).is(ModItems.WINGSUIT)){
 
-            // Do nothing & don't spawn rocket
+            // dont spawn rocket
             cir.setReturnValue(InteractionResultHolder.pass(player.getItemInHand(hand)));
         }
     }

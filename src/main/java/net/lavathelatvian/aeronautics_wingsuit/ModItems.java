@@ -23,9 +23,6 @@ import java.util.function.Supplier;
 
 public class ModItems {
 
-    private static final SimulatedRegistrate REGISTRATE = Aeronautics.getRegistrate();
-
-
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(AeronauticsWingsuit.MODID);
 
 

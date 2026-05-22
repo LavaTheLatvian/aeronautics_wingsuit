@@ -37,13 +37,10 @@ public class WingsuitItem extends BaseArmorItem {
     public WingsuitItem(Holder<ArmorMaterial> material, Properties properties, ResourceLocation textureLoc)
     {
         super(material, TYPE, properties, textureLoc);
-//        DispenserBlock.registerBehavior(this, ArmorItem.DISPENSE_ITEM_BEHAVIOR);
     }
 
-
     public static final Type TYPE = Type.CHESTPLATE;
-    public static final EquipmentSlot SLOT = EquipmentSlot.CHEST;
-//    private static final ResourceLocation TEXTURE = AeronauticsWingsuit.path("wingsuit_jacket");
+
 
     public static boolean isFlyEnabled(ItemStack stack) {
         return true;
@@ -73,11 +70,6 @@ public class WingsuitItem extends BaseArmorItem {
     public EquipmentSlot getEquipmentSlot() {
         return EquipmentSlot.CHEST;
     }
-
-//    @Override
-//    public @Nullable ResourceLocation getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, ArmorMaterial.Layer layer, boolean innerModel) {
-//        return ResourceLocation.parse(String.format(Locale.ROOT, "%s:textures/models/armor/%s_layer_%d.png", textureLoc.getNamespace(), textureLoc.getPath(), slot == EquipmentSlot.LEGS ? 2 : 1));
-//    }
 
     public static class Layered extends WingsuitItem implements LayeredArmorItem {
         public Layered(Holder<ArmorMaterial> material, Properties properties, ResourceLocation textureLoc) {

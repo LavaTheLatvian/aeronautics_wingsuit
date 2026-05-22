@@ -12,6 +12,7 @@ import org.spongepowered.asm.mixin.injection.Slice;
 
 @Mixin(LivingEntity.class)
 public class WingsuitDragMixin {
+    // idk how ts work
     @WrapOperation(
             method = "travel(Lnet/minecraft/world/phys/Vec3;)V",
             slice = @Slice(
@@ -23,7 +24,7 @@ public class WingsuitDragMixin {
             at = @At(
                     value = "INVOKE",
                     target = "Lnet/minecraft/world/phys/Vec3;multiply(DDD)Lnet/minecraft/world/phys/Vec3;",
-                    ordinal = 0  // first multiply AFTER isFallFlying(), which is the 0.99/0.98/0.99 one
+                    ordinal = 0
             )
     )
     private Vec3 wrapWingsuitGlide(Vec3 vec3, double x, double y, double z, Operation<Vec3> original) {
